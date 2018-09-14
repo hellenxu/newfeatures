@@ -9,4 +9,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:text="@string/long_string"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/smartLinkifyText"
+        android:text="@string/linkify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>

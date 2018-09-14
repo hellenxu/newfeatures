@@ -10,13 +10,13 @@
         android:theme="@style/AppTheme" >
 
 
-        <activity android:name=".androidp.MagnifierSampleActivity">
+        <activity android:name=".androidp.PTextFeaturesSampleActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".androidp.PrecomputedTextSampleActivity" />
+        <activity android:name=".androidp.MagnifierSampleActivity" />
     </application>
 </manifest>
