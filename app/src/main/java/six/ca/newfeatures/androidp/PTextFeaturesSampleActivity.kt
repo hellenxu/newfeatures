@@ -3,6 +3,7 @@ package six.ca.newfeatures.androidp
 import android.app.Activity
 import android.os.Bundle
 import android.text.SpannableString
+import android.text.util.Linkify
 import android.view.textclassifier.TextClassifier
 import android.view.textclassifier.TextLinks
 import android.widget.TextView
@@ -56,7 +57,9 @@ class PTextFeaturesSampleActivity: Activity() {
         executor.execute {
             val textView = ref.get() ?: return@execute
 
-            textClassifier.generateLinks(request).apply(textSpannable, TextLinks.APPLY_STRATEGY_REPLACE, null)
+            val mask = textClassifier.generateLinks(request).apply(textSpannable, TextLinks.APPLY_STRATEGY_REPLACE, null)
+            Linkify.addLinks(textSpannable, Linkify.EMAIL_ADDRESSES)
+
             textView.post {
                 textView.text = textSpannable
             }
