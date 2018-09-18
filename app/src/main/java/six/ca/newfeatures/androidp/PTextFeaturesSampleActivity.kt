@@ -58,6 +58,7 @@ class PTextFeaturesSampleActivity: Activity() {
             val textView = ref.get() ?: return@execute
 
             val mask = textClassifier.generateLinks(request).apply(textSpannable, TextLinks.APPLY_STRATEGY_REPLACE, null)
+//            Linkify.addLinks(textSpannable, mask)
             Linkify.addLinks(textSpannable, Linkify.EMAIL_ADDRESSES)
 
             textView.post {
