@@ -8,6 +8,7 @@
         android:id="@+id/computedText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:lineHeight="50sp"
         tools:text="@string/long_string"/>
 
     <TextView
