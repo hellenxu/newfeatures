@@ -1,5 +1,6 @@
 package six.ca.newfeatures.androidp
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
 import android.net.wifi.WifiManager
@@ -18,6 +19,7 @@ class WifiRttExample: Activity() {
     private lateinit var wifiRttManager: WifiRttManager
     private lateinit var wifiManager: WifiManager
 
+    @SuppressLint("MissingPermission")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -40,7 +42,7 @@ class WifiRttExample: Activity() {
                     }                }
             }
 
-            wifiRttManager.startRanging(request, executor = Executors.newSingleThreadExecutor(), callback)
+            wifiRttManager.startRanging(request, Executors.newSingleThreadExecutor(), callback)
         }
 
     }
