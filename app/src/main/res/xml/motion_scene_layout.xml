@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        app:constraintSetEnd="@layout/motion_scene_end"
+        app:constraintSetStart="@layout/motion_scene_start"
+        app:duration="2000">
+        <OnClick app:targetId="@id/logo"
+            app:clickAction="toggle"/>
+    </Transition>
+
+</MotionScene>
