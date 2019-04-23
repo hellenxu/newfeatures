@@ -13,6 +13,7 @@ class MotionLayoutSample: Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 //        setContentView(R.layout.act_motion)
-        setContentView(R.layout.act_motion_fab)
+//        setContentView(R.layout.act_motion_fab)
+        setContentView(R.layout.act_motion_attr)
     }
 }
