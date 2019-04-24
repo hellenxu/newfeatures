@@ -14,6 +14,7 @@ class MotionLayoutSample: Activity() {
         super.onCreate(savedInstanceState)
 //        setContentView(R.layout.act_motion)
 //        setContentView(R.layout.act_motion_fab)
-        setContentView(R.layout.act_motion_attr)
+//        setContentView(R.layout.act_motion_attr)
+        setContentView(R.layout.act_fading)
     }
 }
