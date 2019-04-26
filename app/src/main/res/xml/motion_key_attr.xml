@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <Transition
+        app:duration="2000"
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@id/start">
+        <OnSwipe
+            app:dragDirection="dragDown"
+            app:touchAnchorId="@id/target" />
+
+        <KeyFrameSet>
+            <KeyPosition app:keyPositionType="deltaRelative"
+                app:percentY="0.2"
+                app:framePosition="60"
+                app:motionTarget="@id/target"/>
+            <KeyAttribute android:scaleX="2"
+                android:scaleY="2"
+                android:rotation="100"
+                app:framePosition="50"
+                app:motionTarget="@id/target"/>
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@id/target"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="48dp"
+            android:layout_height="48dp">
+            <CustomAttribute
+                app:attributeName="backgroundColor"
+                app:customColorValue="#d81868" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@id/target"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="48dp"
+            android:layout_height="48dp">
+            <CustomAttribute
+                app:attributeName="backgroundColor"
+                app:customColorValue="#9999FF" />
+        </Constraint>
+    </ConstraintSet>
+
+</MotionScene>
