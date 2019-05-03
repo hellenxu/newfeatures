@@ -18,6 +18,7 @@ class MotionLayoutSample: Activity() {
 //        setContentView(R.layout.act_fading)
 //        setContentView(R.layout.act_keyframe)
 //        setContentView(R.layout.act_key_attr)
-        setContentView(R.layout.act_key_cycle)
+//        setContentView(R.layout.act_key_cycle)
+        setContentView(R.layout.act_key_trigger)
     }
 }

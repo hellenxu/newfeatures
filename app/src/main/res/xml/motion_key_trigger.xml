@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@id/start">
+        <OnSwipe
+            app:dragDirection="dragDown"
+            app:touchAnchorId="@id/logo" />
+        <KeyFrameSet>
+            <KeyTrigger
+                app:framePosition="10"
+                app:motionTarget="@id/logo"
+                app:onPositiveCross="show" />
+
+            <KeyTrigger
+                app:framePosition="80"
+                app:motionTarget="@id/logo"
+                app:onNegativeCross="hide" />
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+        </Constraint>
+    </ConstraintSet>
+</MotionScene>
