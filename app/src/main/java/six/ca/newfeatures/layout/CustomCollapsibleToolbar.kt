@@ -15,7 +15,7 @@ class CustomCollapsibleToolbar @JvmOverloads constructor(ctx: Context,
     : MotionLayout(ctx, attrs, defStyleAttr), AppBarLayout.OnOffsetChangedListener {
 
     override fun onOffsetChanged(appBar: AppBarLayout?, p1: Int) {
-        progress = (-p1 / (appBar?.totalScrollRange?:1)).toFloat()
+        progress = -p1 / appBar?.totalScrollRange?.toFloat()!!
     }
 
     override fun onAttachedToWindow() {
