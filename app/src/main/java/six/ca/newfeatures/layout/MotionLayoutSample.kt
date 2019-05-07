@@ -20,6 +20,7 @@ class MotionLayoutSample: Activity() {
 //        setContentView(R.layout.act_key_attr)
 //        setContentView(R.layout.act_key_cycle)
 //        setContentView(R.layout.act_key_trigger)
-        setContentView(R.layout.act_motion_coordinate)
+//        setContentView(R.layout.act_motion_coordinate)
+        setContentView(R.layout.act_motion_coordinate2)
     }
 }

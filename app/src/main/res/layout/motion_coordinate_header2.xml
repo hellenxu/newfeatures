@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<six.ca.newfeatures.layout.CustomCollapsibleToolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="50dp"
+    app:layoutDescription="@xml/motion_with_coordinate2"
+    app:layout_scrollFlags="scroll|enterAlways|snap|exitUntilCollapsed">
+    <ImageView
+        android:id="@+id/barBackground"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/bg" />
+    <TextView
+        android:id="@+id/leftTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textColor="#fff"
+        android:textSize="32sp"
+        android:transformPivotX="0dp"
+        android:transformPivotY="0dp" />
+    <TextView
+        android:id="@+id/rightTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_jane_doe"
+        android:textColor="#fff"
+        android:textSize="32sp" />
+</six.ca.newfeatures.layout.CustomCollapsibleToolbar>

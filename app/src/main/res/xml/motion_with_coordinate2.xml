@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@id/start"
+        app:duration="2000"
+        app:motionInterpolator="linear">
+        <OnSwipe
+            app:dragDirection="dragUp"
+            app:touchAnchorId="@id/barBackground"
+            app:touchAnchorSide="bottom" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/barBackground"
+            android:alpha="1.0"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <Constraint
+            android:id="@+id/leftTitle"
+            android:rotation="-90"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/barBackground"/>
+
+        <Constraint
+            android:id="@+id/rightTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@id/leftTitle"
+            app:layout_constraintStart_toEndOf="parent" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/barBackground"
+            android:alpha="0.3"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <Constraint
+            android:id="@+id/leftTitle"
+            android:rotation="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/barBackground" />
+
+        <Constraint
+            android:id="@+id/rightTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBaseline_toBaselineOf="@id/leftTitle"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </ConstraintSet>
+</MotionScene>
