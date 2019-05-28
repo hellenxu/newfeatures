@@ -15,16 +15,15 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
-
-        <activity android:name=".layout.MotionLayoutSample" />
-
-        <activity android:name=".androidp.WebViewSample">
+        <activity android:name=".jetpack.ViewPager2Sample">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
+        <activity android:name=".layout.MotionLayoutSample" />
+        <activity android:name=".androidp.WebViewSample" />
         <activity android:name=".androidp.PTextFeaturesSampleActivity"/>
         <activity android:name=".androidp.MagnifierSampleActivity" />
     </application>
