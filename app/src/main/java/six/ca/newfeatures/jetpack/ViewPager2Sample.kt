@@ -43,15 +43,15 @@ class ViewPager2Sample : AppCompatActivity() {
                 return vpFragments[position]
             }
         }
-
         vp2.adapter = object : FragmentStateAdapter(this) {
-            override fun getItem(position: Int): Fragment {
-                return vp2Fragments[position]
-            }
-
             override fun getItemCount(): Int {
                 return vp2Fragments.size
             }
+
+            override fun createFragment(position: Int): Fragment {
+                return vp2Fragments[position]
+            }
+
         }
     }
 
